@@ -1,0 +1,15 @@
+{
+    "version": 1,
+    "name": "mniwoc",
+    "build": {
+        "command": "npm run build",
+        "publish": "out", // Directory to publish after build
+        "env": {
+            "NODE_ENV": "production" // Set environment variable for production
+        }
+    },
+    "hosting": {
+        "type": "ipfs",
+        "subdomain": "test"
+    }
+}
