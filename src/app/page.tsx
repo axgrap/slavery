@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <div className="flex bg-[#f4f0e7] text-black">
-      <header className="fixed ml-16 top-0 left-0 right-0 bg-transparent text-red-600 p-4 z-10 flex items-center justify-between">
+      <header className=" bg-[#f4f0e7] fixed top-0 left-0 right-0 text-red-600 p-4 pl-16 z-10 flex items-center justify-between">
         <div className="flex items-center">
           <div className="h-20 w-20 fixed top-0 left-0 ">
             <div className="absolute inset-0 z-0">
@@ -31,7 +31,6 @@ export default function Home() {
           <div className="w-6 h-1 bg-red-600 mb-1"></div>
           <div className="w-6 h-1 bg-red-600"></div>
         </button>
-        {/* <hr className="border-t-4 border-red-600 my-4" /> */}
       </header>
       <aside
         className={`mt-16 fixed top-0 right-0 h-full bg-gray-800 bg-opacity-80 text-white transition-transform transform ${
@@ -78,20 +77,39 @@ export default function Home() {
           </div>
         </footer>
       </aside>
-      <div className="flex-1 ml-0 mt-16">
+      <div className="flex-1 ml-0">
         <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] bg-[#f4f0e7] text-black">
           <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-            <p className="text-lg text-center sm:text-left">
-              Join us in the fight to end prison slavery and advocate for
-              justice and equality for all.
+            <h2 className="text-lg text-center sm:text-left font-bold font-oswald">
+              Abolish Prison Slavery in MN
+            </h2>
+            <p>
+              Join us in our fight for justice and dignity for incarcerated
+              workers. The IWOC is a standing committee of the Industrial
+              Workers of the World (IWW) dedicated to organizing incarcerated
+              individuals and those impacted by the prison industrial complex.
+              Our mission is to create meaningful change, build solidarity, and
+              fight for fair labor practices within the prison system.
             </p>
-
             <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-              <li className="mb-2">
-                Learn more about our mission and how you can help.
+              <li>
+                <strong>Donate:</strong> Your financial support enables us to
+                provide resources, fund organizing efforts, and amplify the
+                voices of those fighting for justice behind bars.
               </li>
-              <li>Donate to support our cause.</li>
-              <li>Sign our petition to demand change.</li>
+              <br />
+              <li>
+                <strong>Sign the Petition:</strong> Minnesota’s constitution
+                still permits slavery in prisons, forcing people to work for as
+                little as $0.25 an hour.
+              </li>
+              <br />
+              <li>
+                <strong>Volunteer:</strong> Whether youre inside or outside the
+                system, your support is essential. Help us grow our network,
+                organize locals, and raise awareness about the exploitation of
+                incarcerated workers.
+              </li>
             </ol>
 
             <div className="flex gap-4 items-center flex-col sm:flex-row">
@@ -102,6 +120,14 @@ export default function Home() {
                 rel="noopener noreferrer"
               >
                 Donate Now
+              </a>
+              <a
+                className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-red-600 text-white gap-2 hover:bg-red-700 text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
+                href="/petition"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Contact Us
               </a>
               <a
                 className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-red-600 text-white gap-2 hover:bg-red-700 text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
