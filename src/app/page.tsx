@@ -7,14 +7,14 @@ import {
   faTwitter,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons"; // {{ edit_4 }}
-import Image from "next/image"; // {{ edit_1 }}
+import Image from "next/image"; // {{ edit_5 }}
 
 export default function Home() {
-  const [isSidebarOpen, setSidebarOpen] = useState(false); // {{ edit_3 }}
+  const [isSidebarOpen, setSidebarOpen] = useState(false); // {{ edit_6 }}
 
   return (
     <div className="flex bg-[#f4f0e7] text-black">
-      <header className=" bg-[#f4f0e7] fixed top-0 left-0 right-0 text-red-600 p-4 pl-16 z-10 flex items-center justify-between">
+      <header className="border-b-2 border-red-600 bg-[#f4f0e7] fixed top-0 left-0 right-0 text-red-600 p-4 pl-16 z-10 flex items-center justify-between">
         <div className="flex items-center">
           <div className="h-20 w-20 fixed top-0 left-0 ">
             <div className="absolute inset-0 z-0">
@@ -35,9 +35,9 @@ export default function Home() {
       <aside
         className={`mt-16 fixed top-0 right-0 h-full bg-gray-800 bg-opacity-80 text-white transition-transform transform ${
           isSidebarOpen ? "translate-x-0" : "translate-x-full"
-        } w-64`}
+        } w-64 flex flex-col`}
       >
-        <nav className="p-4">
+        <nav className="p-4 flex-grow">
           <a href="/resources" className="block py-2">
             Resources
           </a>
@@ -48,7 +48,8 @@ export default function Home() {
             Contact Us
           </a>
         </nav>
-        <footer className="p-4 border-t border-gray-700 mt-auto">
+        <div className="border-t border-gray-700 my-4" />
+        <footer className="p-4">
           <div className="flex justify-center">
             <a
               href="https://facebook.com"
@@ -93,22 +94,23 @@ export default function Home() {
             </p>
             <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
               <li>
-                <strong>Donate:</strong> Your financial support enables us to
-                provide resources, fund organizing efforts, and amplify the
-                voices of those fighting for justice behind bars.
+                <strong>Donate:</strong>
+                <br /> Your financial support enables us to provide resources,
+                fund organizing efforts, and amplify the voices of those
+                fighting for justice behind bars.
               </li>
               <br />
               <li>
-                <strong>Sign the Petition:</strong> Minnesota’s constitution
-                still permits slavery in prisons, forcing people to work for as
-                little as $0.25 an hour.
+                <strong>Sign the Petition:</strong>
+                <br /> Minnesota's constitution still permits slavery in
+                prisons, forcing people to work for as little as $0.25 an hour.
               </li>
               <br />
               <li>
-                <strong>Volunteer:</strong> Whether youre inside or outside the
-                system, your support is essential. Help us grow our network,
-                organize locals, and raise awareness about the exploitation of
-                incarcerated workers.
+                <strong>Volunteer:</strong>
+                <br /> Whether youre inside or outside the system, your support
+                is essential. Help us grow our network, organize locals, and
+                raise awareness about the exploitation of incarcerated workers.
               </li>
             </ol>
 
@@ -148,31 +150,34 @@ export default function Home() {
               </a>
             </div>
           </main>
-          <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-            <a
-              className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-red-600"
-              href="/resources"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Resources
-            </a>
-            <a
-              className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-red-600"
-              href="/events"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Upcoming Events
-            </a>
-            <a
-              className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-red-600"
-              href="/contact"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Contact Us
-            </a>
+          <footer className="border-t-2 border-red-600 row-start-3 flex gap-6 flex-wrap items-center justify-center">
+            <div>
+              <a
+                className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-red-600"
+                href="/resources"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Resources
+              </a>
+              <a
+                className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-red-600"
+                href="/events"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Upcoming Events
+              </a>
+              <a
+                className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-red-600"
+                href="/contact"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Contact Us
+              </a>
+            </div>
+            <br />
             <div className="flex justify-center mt-4">
               <a
                 href="https://facebook.com"
